@@ -6,6 +6,9 @@
 - The list is intentionally selective rather than exhaustive. Priority goes to seminal papers, top-field journals, and strong institutional syntheses from bodies such as the IMF and OECD.
 - The literature is US- and UK-heavy because that is where the most cited empirical housing work is concentrated.
 
+## Companion File
+- For a more operational research-planning view, see `real-estate-factor-mechanism-dataset-matrix.md` in the same `library` directory. It maps each factor to likely price channels, best UK-first datasets, and best starter papers.
+
 ## Quick Start
 - If you want the core conceptual frame for how housing markets work, start with DiPasquale and Wheaton (1992), Rosen (1974), and Poterba (1984).
 - If you want to explain prices with property and neighborhood characteristics, start with Rosen (1974), Hill (2011), Black (1999), Gibbons (2004), and Gibbons and Machin (2005).
@@ -478,3 +481,148 @@
 - Add Glaeser and Gyourko (2005) for durable-stock dynamics in weak-demand places.
 - Add Sims (2007) and Diamond, McQuade, and Qian (2019) for landlord behavior under regulation.
 - Watch-out: Rental-market outcomes can move through several margins at once: rents, vacancy, maintenance quality, tenure conversion, and long-run stock composition.
+
+## 14. Factor Map For The Variables You Listed
+
+### Income
+- Best starting resources: Hendershott and Abraham (1992), Roback (1982), and Geng (2018).
+- Best use when: You want to link wage or income growth to local or cross-country house-price movements.
+- Why these help: They separate pure income-demand effects from broader place-quality and macro-financial effects.
+
+### Wealth Distribution
+- Best starting resources: Määttänen and Terviö (2014) and Landvoigt, Piazzesi, and Schneider (2015).
+- Best use when: You want to study how inequality, credit access, and buyer composition affect different parts of the housing market.
+- Why these help: They move beyond average prices and show how distributional shifts can affect low-end and high-end housing differently.
+
+### Crime
+- Best starting resources: Gibbons (2004) and Linden and Rockoff (2008).
+- Best use when: You want to justify crime variables in hedonic models or estimate localized disamenity effects.
+- Why these help: They provide strong causal or near-causal evidence that crime risk is capitalized into property values.
+
+### Schools
+- Best starting resources: Black (1999) and Nguyen-Hoang and Yinger (2011).
+- Best use when: You want a causal anchor plus a later-literature map on school-quality capitalization.
+- Why these help: They show both the canonical identification strategy and the range of effect sizes later studies tend to find.
+
+### Property Supply
+- Best starting resources: Saiz (2010), Hilber and Vermeulen (2016), Glaeser, Gyourko, and Saks (2005), and Glaeser, Gyourko, and Saiz (2008).
+- Best use when: You want to explain persistent high prices, affordability problems, or large regional price divergence.
+- Why these help: They connect geography, regulation, and market elasticity to price responses.
+
+### Unemployment
+- Best starting resources: Gan and Zhang (2006; 2013) and Liu, Miao, and Zha (2016).
+- Best use when: You want to study housing-market liquidity, price sensitivity, and labor-market interactions during downturns.
+- Why these help: They treat unemployment as part of search, matching, and macro-labor dynamics rather than as a simple control variable.
+
+### Mortgage Rates
+- Best starting resources: Poterba (1984), Himmelberg, Mayer, and Sinai (2005), and Ahearne et al. (2005).
+- Best use when: You want to translate lower borrowing costs into user cost, affordability, and boom-bust dynamics.
+- Why these help: They connect mortgage and policy rates to valuation, not just to payment arithmetic.
+
+### Inflation
+- Best starting resources: Poterba (1980), Hendershott and Abraham (1992), and Ahearne et al. (2005).
+- Best use when: You want to understand how inflation changes real house prices directly, through taxes, or through real interest-rate channels.
+- Why these help: They show why inflation can matter even when nominal mortgage rates also rise.
+
+### Important Events
+- Best starting resources: Choi (2023) and Balcilar, Roubaud, Uzuner, and Wohar (2021).
+- Best use when: You want to study elections, policy uncertainty, or event-driven pauses in prices, transactions, permits, and mortgage demand.
+- Why these help: They are practical entry points for event-study style work on uncertainty shocks.
+
+## 15. Additional Factor-Specific Resources
+
+### Patric H. Hendershott and Jesse M. Abraham (1992), *Patterns and Determinants of Metropolitan House Prices, 1977-91*
+- Type: Classic macro-determinants paper; NBER / Federal Reserve conference volume.
+- Summary: A practical metro-level house-price model that explicitly uses real income growth, employment growth, real construction-cost inflation, and real after-tax interest rates.
+- Best use when: You want one paper that covers several of your requested macro factors at once.
+- Main factors: Income, employment, inflation, after-tax interest rates, construction costs.
+- Why it matters for your project: Especially useful as a baseline empirical specification when you later build factor models.
+- Links: [NBER](https://www.nber.org/papers/w4196), [DOI](https://doi.org/10.3386/w4196)
+
+### Niku Määttänen and Marko Terviö (2014), *Income Distribution and Housing Prices: An Assignment Model Approach*
+- Type: Strong theory-plus-empirics paper; Journal of Economic Theory.
+- Summary: A key paper for understanding how changes in the income distribution affect the distribution of house prices, not just the average price.
+- Best use when: You want a clean theoretical base for inequality or wealth-distribution effects.
+- Main factors: Income distribution, inequality, heterogeneous housing quality, price distribution.
+- Why it matters for your project: Very useful if you later segment the market by property quality, location, or buyer type.
+- Links: [DOI](https://doi.org/10.1016/j.jet.2014.01.003), [Aalto portal](https://research.aalto.fi/en/publications/income-distribution-and-housing-prices-an-assignment-model-approa/)
+
+### Tim Landvoigt, Monika Piazzesi, and Martin Schneider (2015), *The Housing Market(s) of San Diego*
+- Type: Major heterogeneous-agent housing paper; American Economic Review.
+- Summary: Explains the cross-section of house prices using variation in income, wealth, age, and credit constraints. A central result is that cheaper credit for poorer households pushed up low-end prices disproportionately.
+- Best use when: You want to study how wealth distribution and credit access change different market segments differently.
+- Main factors: Wealth, income, credit constraints, market segmentation, low-end versus high-end prices.
+- Why it matters for your project: One of the most useful papers if you want to move beyond a single average house-price equation.
+- Links: [AEA](https://www.aeaweb.org/articles?id=10.1257%2Faer.20111662), [NBER Working Paper](https://www.nber.org/papers/w17723)
+
+### Leigh Linden and Jonah E. Rockoff (2008), *Estimates of the Impact of Crime Risk on Property Values from Megan's Laws*
+- Type: High-trust causal crime paper; American Economic Review.
+- Summary: Uses offender move-ins as a localized shock to perceived crime risk and finds sharp, geographically tight house-price discounts.
+- Best use when: You need a strong causal design for crime-risk capitalization.
+- Main factors: Crime risk, perceived safety, localized disamenities, property values.
+- Why it matters for your project: Excellent complement to Gibbons (2004) if you want both UK and US evidence.
+- Links: [AEA](https://www.aeaweb.org/articles?id=10.1257%2Faer.98.3.1103), [NBER Working Paper](https://www.nber.org/papers/w12253)
+
+### Phuong Nguyen-Hoang and John Yinger (2011), *The Capitalization of School Quality into House Values: A Review*
+- Type: Literature review; Journal of Housing Economics.
+- Summary: Reviews post-1999 evidence on school-quality capitalization and gives a realistic sense of effect sizes under more rigorous designs.
+- Best use when: You want to know what the school-quality literature broadly finds before choosing specific causal papers.
+- Main factors: School quality, capitalization, identification strategy, effect-size interpretation.
+- Why it matters for your project: Helpful for deciding how much weight to place on school variables and how to discuss them in later writeups.
+- Links: [DOI](https://doi.org/10.1016/j.jhe.2011.02.001), [University of Iowa record](https://iro.uiowa.edu/esploro/outputs/journalArticle/The-capitalization-of-school-quality-into/9984083292102771)
+
+### Edward L. Glaeser, Joseph Gyourko, and Raven E. Saks (2005), *Why Have Housing Prices Gone Up?*
+- Type: Short but influential supply-side paper; American Economic Review / NBER.
+- Summary: Argues that the long-run rise in housing prices since 1970 is strongly tied to increasingly restrictive regulation rather than only to construction costs.
+- Best use when: You want a compact, highly cited argument for regulation and supply constraints as major price drivers.
+- Main factors: Supply constraints, regulation, approval difficulty, long-run prices.
+- Why it matters for your project: Strong complement to Saiz (2010) and Hilber and Vermeulen (2016).
+- Links: [NBER](https://www.nber.org/papers/w11129), [DOI](https://doi.org/10.3386/w11129)
+
+### Li Gan and Qinghua Zhang (2006), *The Thick Market Effect on Housing Markets Transactions*
+- Type: Search-and-matching housing paper; NBER / Journal of Econometrics.
+- Summary: Develops and tests a model in which higher unemployment weakens housing transactions and sale prices, especially in thinner markets.
+- Best use when: You want a stronger treatment of unemployment than a simple regression coefficient.
+- Main factors: Unemployment, transaction volume, price sensitivity, market thickness.
+- Why it matters for your project: Particularly useful if you will analyze time on market, liquidity, or market depth together with prices.
+- Links: [NBER](https://www.nber.org/papers/w12134), [DOI](https://doi.org/10.3386/w12134)
+
+### Zheng Liu, Jianjun Miao, and Tao Zha (2016), *Land Prices and Unemployment*
+- Type: Macro-housing-labor integration paper; Journal of Monetary Economics / NBER.
+- Summary: Integrates housing and labor markets in a DSGE framework with search and credit frictions and shows that falling land prices can materially raise unemployment.
+- Best use when: You want a macro-theory bridge between housing-market conditions and labor-market slack.
+- Main factors: Unemployment, land prices, labor search frictions, credit conditions.
+- Why it matters for your project: Good for understanding two-way feedback between housing markets and the real economy.
+- Links: [NBER](https://www.nber.org/papers/w19382), [DOI](https://doi.org/10.3386/w19382)
+
+### Alan G. Ahearne, John Ammer, Brian M. Doyle, Linda S. Kole, and Robert F. Martin (2005), *House Prices and Monetary Policy: A Cross-Country Study*
+- Type: Trusted institutional analysis; Federal Reserve Board IFDP.
+- Summary: Studies house-price booms across industrial countries and finds that they are typically preceded by easier monetary conditions and followed by tightening as inflation and output gaps rise.
+- Best use when: You want a broad cross-country resource on monetary policy, mortgage conditions, and housing cycles.
+- Main factors: Monetary policy, mortgage conditions, inflation, output gaps, business cycles.
+- Why it matters for your project: A good bridge between micro housing research and central-bank macro analysis.
+- Links: [Federal Reserve](https://www.federalreserve.gov/pubs/ifdp/2005/841/ifdp841.htm)
+
+### James M. Poterba (1980), *Inflation, Income Taxes, and Owner-Occupied Housing*
+- Type: Foundational inflation-and-housing paper; NBER.
+- Summary: Shows how inflation can reduce the effective user cost of homeownership through tax interactions, thereby raising real house prices and housing demand.
+- Best use when: You want a clear theory for why inflation can matter even after accounting for nominal interest rates.
+- Main factors: Inflation, taxes, mortgage deductibility, user cost, real house prices.
+- Why it matters for your project: This is the most direct classic paper for the inflation factor on your list.
+- Links: [NBER](https://www.nber.org/papers/w0553), [DOI](https://doi.org/10.3386/w0553)
+
+### Chi-Young Choi (2023), *State Political Uncertainty and Local Housing Markets: Evidence from U.S. Mid-Term Gubernatorial Elections*
+- Type: Event-uncertainty paper; Applied Economics.
+- Summary: Finds that greater state political uncertainty lowers local house-price growth, with stronger effects in some local market structures than others.
+- Best use when: You want an event-study style paper tied specifically to elections.
+- Main factors: Elections, political uncertainty, house-price growth, local heterogeneity.
+- Why it matters for your project: A practical paper for the "important events" factor you mentioned.
+- Links: [Taylor and Francis](https://www.tandfonline.com/doi/full/10.1080/00036846.2023.2165618), [DOI](https://doi.org/10.1080/00036846.2023.2165618)
+
+### Mehmet Balcilar, David Roubaud, Gizem Uzuner, and Mark E. Wohar (2021), *Housing Sector and Economic Policy Uncertainty: A GMM Panel VAR Approach*
+- Type: Cross-country uncertainty paper; International Review of Economics and Finance.
+- Summary: Shows that shocks to economic policy uncertainty reduce housing-price growth across countries and have predictive power for housing markets.
+- Best use when: You want a broader uncertainty framework than elections alone, including crises and policy shocks.
+- Main factors: Economic policy uncertainty, price growth, macro shocks, cross-country dynamics.
+- Why it matters for your project: Useful when event risk is more about policy, crisis, or geopolitical uncertainty than one election.
+- Links: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1059056021001192), [IDEAS/RePEc](https://ideas.repec.org/a/eee/reveco/v76y2021icp114-126.html)
