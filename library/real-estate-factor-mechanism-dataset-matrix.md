@@ -2,6 +2,7 @@
 
 ## Scope
 - This is a practical companion to `real-estate-price-dynamics-research-library.md`.
+- For a ranked set of research ideas that turns these factor paths into concrete quantitative projects, see `../ideas/real-estate-price-mechanism-ranked-ideas.md`.
 - It is UK-first and England-focused where possible, because that is the most natural fit for your current research direction and data stack.
 - It is designed for explanatory variables. For target variables such as sale prices, price indices, rents, listings, and stock, keep using your main real-estate datasets separately.
 - Dataset links were checked on April 11, 2026.

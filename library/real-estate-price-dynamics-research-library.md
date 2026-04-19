@@ -6,8 +6,9 @@
 - The list is intentionally selective rather than exhaustive. Priority goes to seminal papers, top-field journals, and strong institutional syntheses from bodies such as the IMF and OECD.
 - The literature is US- and UK-heavy because that is where the most cited empirical housing work is concentrated.
 
-## Companion File
+## Companion Files
 - For a more operational research-planning view, see `real-estate-factor-mechanism-dataset-matrix.md` in the same `library` directory. It maps each factor to likely price channels, best UK-first datasets, and best starter papers.
+- For a ranked, implementation-oriented set of concrete quantitative ideas built from the current data stack, see `../ideas/real-estate-price-mechanism-ranked-ideas.md`.
 
 ## Quick Start
 - If you want the core conceptual frame for how housing markets work, start with DiPasquale and Wheaton (1992), Rosen (1974), and Poterba (1984).
@@ -222,7 +223,7 @@
 - Summary: A practical summary of macro fundamentals behind house prices in advanced economies, including income, rates, demographics, and credit.
 - Best use when: You want a concise institutional overview before digging into country-specific work.
 - Main factors: Income, demographics, interest rates, credit, supply.
-- Why it matters for your project: Good orientation piece for turning a large set of candidate drivers into a manageable research agenda.
+- Why it matters for your project: Good orientation piece for turning a large set of candidate drivers into a manageable research ideas set.
 - Links: [IMF](https://www.imf.org/en/Publications/WP/Issues/2018/04/06/Fundamental-Drivers-of-House-Prices-in-Advanced-Economies-45725)
 
 ### Aida Caldera Sanchez and Asa Johansson (2011), *The Price Responsiveness of Housing Supply in OECD Countries*
