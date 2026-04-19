@@ -155,6 +155,7 @@
 ## Notes And Caveats
 - Wealth distribution is the hardest item on your list to measure locally in the UK. Expect to mix national or regional wealth data with local proxy variables.
 - Important events work best when you define the channel up front: uncertainty, financing, migration, physical damage, or energy-cost shock.
+- Online listing datasets can be compositionally biased. If you use portal or classifieds data, benchmark their coverage against transactions, stock, or survey sources before treating them as representative of the whole market.
 - Property-level composition effects matter. Average prices can move because the quality mix of homes sold changed, not only because constant-quality prices changed.
 - Schools and crime are often highly localized. Align them spatially as tightly as possible to the property.
 - Supply works best with both stock and flow measures. Stock alone misses new-building dynamics; flow alone misses inherited scarcity.

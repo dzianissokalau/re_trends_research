@@ -17,6 +17,7 @@
 - If you want to study credit-driven booms and busts, start with Mian and Sufi (2009), Mian and Sufi (2011), Hirata et al. (2013), and Geng (2018).
 - If you want to build or validate price indices from sales or listing data, start with Bailey, Muth, and Nourse (1963), Case and Shiller (1987), and Hill (2011).
 - If you want rental-market and regulation evidence, start with Gallin (2008), Davis, Lehnert, and Martin (2008), and Diamond, McQuade, and Qian (2019).
+- If you want frontier additions from a dedicated arXiv scan, skip to Section 16, but treat it as a supplement to the peer-reviewed and NBER/IMF/OECD core above rather than a replacement.
 
 ## Suggested Reading Order
 1. DiPasquale and Wheaton (1992) for the market structure.
@@ -626,3 +627,64 @@
 - Main factors: Economic policy uncertainty, price growth, macro shocks, cross-country dynamics.
 - Why it matters for your project: Useful when event risk is more about policy, crisis, or geopolitical uncertainty than one election.
 - Links: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1059056021001192), [IDEAS/RePEc](https://ideas.repec.org/a/eee/reveco/v76y2021icp114-126.html)
+
+## 16. arXiv Watchlist: Selected Preprints Worth Tracking
+
+- This section comes from a separate arXiv-focused scan done on April 19, 2026.
+- arXiv is not the main home of the canonical housing-economics literature. Most of the strongest established work in this field still appears first as journal articles, NBER papers, IMF papers, OECD papers, or other economics working papers.
+- Use the entries below as frontier additions, methods references, or recent evidence. Do not treat them as substitutes for the peer-reviewed core above unless later publication confirms them.
+
+### Emanuel Kohlscheen (2025; revised 2026), *Forecasting House Prices*
+- Type: arXiv preprint; cross-country empirical forecasting paper.
+- Summary: Uses a random-forest framework on 13 advanced economies over roughly 35 years and finds that annual house-price growth is driven most strongly by price momentum, initial valuation as proxied by price-to-rent ratios, and household credit growth, with nonlinear effects for variables including CPI inflation.
+- Best use when: You want a recent, compact empirical ranking of macro drivers or a nonlinear forecasting benchmark.
+- Main factors: Momentum, valuation, household credit growth, CPI inflation.
+- Why it matters for your project: This is one of the clearest recent arXiv papers that directly speaks to your factor set and your eventual forecasting workflow.
+- Links: [arXiv](https://arxiv.org/abs/2509.21460), [EconPapers](https://econpapers.repec.org/RePEc:arx:papers:2509.21460)
+
+### Tomohiro Hirano and Alexis Akira Toda (2023; revised 2025), *Housing Bubbles with Phase Transitions*
+- Type: arXiv preprint; modern housing-bubble theory.
+- Summary: Develops an overlapping-generations housing model in which rising buyer income can move the economy from a fundamental regime to a bubble-possible regime and then to a regime where bubbly equilibria become necessary. The theory also discusses roles for credit and expectations.
+- Best use when: You want a frontier theory resource on bubble regimes, expectations, and non-linear transitions rather than a standard reduced-form bubble test.
+- Main factors: Income growth, expectations, credit, bubble dynamics.
+- Why it matters for your project: Useful as a modern complement to Case-Shiller, Himmelberg-Mayer-Sinai, and Glaeser-Nathanson if you later build a stronger bubble or speculative-demand branch.
+- Links: [arXiv](https://arxiv.org/abs/2303.11365), [EconPapers](https://econpapers.repec.org/RePEc:arx:papers:2303.11365)
+
+### Anna Bellaver, Lorenzo Costantini, Ariadna Fosch, Anna Monticelli, David Scala, and Marco Pangallo (2025; revised 2025), *Floods do not sink prices, historical memory does: How flood risk impacts the Italian housing market*
+- Type: arXiv preprint; recent climate-risk capitalization evidence.
+- Summary: Using about 550,000 mortgage-financed transactions from 2016 to 2024 with hedonic and difference-in-differences designs, the paper finds that individual flood events do not immediately reduce prices in risky areas, but repeated exposure lowers prices in frequently flooded regions by up to about 4%, with heterogeneity by buyer age and income.
+- Best use when: You want a newer climate-risk paper that goes beyond one-off event effects and focuses on persistence, salience, and buyer heterogeneity.
+- Main factors: Flood risk, repeated exposure, salience, buyer composition.
+- Why it matters for your project: Strong recent evidence for the idea that environmental risk is capitalized through memory and experience, not only through contemporaneous event shocks.
+- Links: [arXiv](https://arxiv.org/abs/2502.12116), [EconPapers](https://econpapers.repec.org/RePEc:arx:papers:2502.12116)
+
+### Geoff Boeing (2019), *Online Rental Housing Market Representation and the Digital Reproduction of Urban Inequality*
+- Type: arXiv preprint; later published in *Environment and Planning A: Economy and Space*.
+- Summary: Studies millions of Craigslist rental listings and shows that online listing coverage is not neutral: listings over-represent whiter, wealthier, and better-educated communities and under-represent other market segments.
+- Best use when: You want to assess whether online rental or listing data are representative enough to support inference on rents, supply, or affordability.
+- Main factors: Listing-platform coverage bias, digital inequality, rental-market representation.
+- Why it matters for your project: This is directly relevant because you are building listing-based datasets. It is one of the strongest reasons to benchmark online listings against transaction, stock, or survey sources before drawing broad market conclusions.
+- Links: [arXiv](https://arxiv.org/abs/1907.06118), [EconPapers](https://econpapers.repec.org/RePEc:arx:papers:1907.06118)
+
+### Osman Dogan, Raffaele Mattera, Philipp Otto, and Suleyman Taspinar (2024), *A Dynamic Spatiotemporal and Network ARCH Model with Common Factors*
+- Type: arXiv preprint; advanced spatial-volatility methods paper.
+- Summary: Introduces a dynamic spatiotemporal volatility model with spatial, temporal, and latent-factor components, and demonstrates it in part on the U.S. housing market, finding strong spatial and network spillovers.
+- Best use when: You want to model spatial volatility clustering, interconnected local markets, or spillovers in house-price growth rather than just average level effects.
+- Main factors: Spatial spillovers, common factors, volatility dynamics, network effects.
+- Why it matters for your project: This is not a starter paper, but it is a useful watchlist item if your work evolves toward spatial panel forecasting or volatility/risk modeling across local markets.
+- Links: [arXiv](https://arxiv.org/abs/2410.16526), [EconPapers](https://econpapers.repec.org/RePEc:arx:papers:2410.16526)
+
+### Alisa Yusupova, Nicos G. Pavlidis, and Efthymios G. Pavlidis (2019), *Adaptive Dynamic Model Averaging with an Application to House Price Forecasting*
+- Type: arXiv preprint; forecasting-methods paper with a UK application.
+- Summary: Develops an adaptive dynamic model-averaging approach and reports more accurate forecasts for quarterly UK house prices than benchmark autoregressive and competing dynamic model-averaging specifications.
+- Best use when: You want a UK-relevant forecasting methods reference for unstable relationships and model uncertainty.
+- Main factors: Forecast instability, model uncertainty, time-varying coefficients, UK house-price forecasting.
+- Why it matters for your project: This is one of the more relevant arXiv methods papers if you later move from explanatory research into out-of-sample forecasting for UK prices.
+- Links: [arXiv](https://arxiv.org/abs/1912.04661), [EconPapers](https://econpapers.repec.org/RePEc:arx:papers:1912.04661)
+
+### How to use this branch
+- Start with Kohlscheen if your next step is factor ranking or predictive modeling.
+- Start with Boeing if you are about to rely heavily on online listing datasets and need to think carefully about representativeness.
+- Start with Bellaver et al. if you are adding environmental or climate-risk features and want a more recent capitalization paper than the peer-reviewed climate papers already in the library.
+- Start with Hirano and Toda if you want a frontier theoretical bubble branch.
+- Treat Dogan et al. and Yusupova et al. as methods references rather than first-read theory papers.
