@@ -1,5 +1,7 @@
 # Real Estate Factor, Mechanism, Dataset, And Starter Paper Matrix
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 ## Scope
 - This is a practical companion to `real-estate-price-dynamics-research-library.md`.
 - For a ranked set of research ideas that turns these factor paths into concrete quantitative projects, see `../ideas/real-estate-price-mechanism-ranked-ideas.md`.

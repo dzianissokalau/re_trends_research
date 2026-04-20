@@ -1,5 +1,7 @@
 # Real Estate Price Dynamics Research Library
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 ## Purpose
 - This file is a working library of high-trust theories, empirical studies, and institutional analyses on residential real estate prices and rents.
 - The emphasis is on resources that help explain price dynamics and underlying factors: structure, location, schools, crime, income, labor markets, credit conditions, supply constraints, regulation, amenities, and macro cycles.

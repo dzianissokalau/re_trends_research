@@ -1,5 +1,7 @@
 # Real Estate Price Mechanism Ranked Research Ideas
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 ## Purpose
 - This file turns the current literature library and factor-to-dataset matrix into a ranked set of research ideas focused on UK residential sale prices.
 - It is designed to answer a practical question: which quantitative studies are both interesting and realistically supportable with the current `re_trends` data stack and its companion dataset specs?

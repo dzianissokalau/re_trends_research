@@ -1,5 +1,7 @@
 # Mortgage-Rate Pass-Through Under Supply Constraints (UK)
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 ## Purpose
 
 This document is a build sheet for an AI research agent that will execute the actual study.
