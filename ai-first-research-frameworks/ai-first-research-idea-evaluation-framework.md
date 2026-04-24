@@ -1,10 +1,10 @@
-# Economics Research Idea Evaluation Framework
+# AI-First Research Idea Evaluation Framework
 
 > Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
 
 ## Purpose
 
-- This framework is for ranking AI-assisted quantitative research and forecasting ideas by real economic usefulness, not by academic novelty alone.
+- This framework is for ranking AI-first quantitative research and forecasting ideas by real economic usefulness, not by academic novelty alone.
 - The goal is to prioritize studies that can influence decisions such as pricing, investment, lending, development, risk management, policy, or allocation.
 - It is designed to work with the current `re_trends` data spine first, while explicitly accounting for variables that can be added from open public sources.
 - It should be used before a full research plan is written, so weak ideas are filtered out early and strong ideas are made operational quickly.

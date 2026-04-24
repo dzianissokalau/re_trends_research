@@ -11,7 +11,8 @@
 ## Companion Files
 - Conceptual literature spine: [real-estate-price-dynamics-research-library.md](../library/real-estate-price-dynamics-research-library.md)
 - Factor-to-mechanism-to-data bridge: [real-estate-factor-mechanism-dataset-matrix.md](../library/real-estate-factor-mechanism-dataset-matrix.md)
-- Structured rank table for filtering and sorting: [real-estate-price-mechanism-ranked-ideas.csv](./real-estate-price-mechanism-ranked-ideas.csv)
+- Structured rank table for filtering and sorting: [real-estate-price-mechanism-ranked-ideas-table.md](./real-estate-price-mechanism-ranked-ideas-table.md)
+- Source tabular file: [real-estate-price-mechanism-ranked-ideas.csv](./real-estate-price-mechanism-ranked-ideas.csv)
 
 ## Scope And Defaults
 - The ideas are UK-first and England-heavy because that matches the strongest overlap between the literature and the currently available data specs.
