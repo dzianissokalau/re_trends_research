@@ -1,1 +1,3 @@
 .DS_Store
+researches/mortgage-rate-pass-through-under-supply-constraints-uk/outputs/*.csv
+researches/mortgage-rate-pass-through-under-supply-constraints-uk/outputs/bigquery-cost-log.md
