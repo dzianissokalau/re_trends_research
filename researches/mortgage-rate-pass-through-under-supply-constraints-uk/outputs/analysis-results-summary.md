@@ -1,5 +1,7 @@
 # Analysis Results Summary
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 - Main LAD-quarter panel rows: `13,319`.
 - LADs in panel: `296`.
 - Quarters in panel: `2015Q1` to `2026Q1`.

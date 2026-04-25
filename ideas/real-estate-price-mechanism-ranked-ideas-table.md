@@ -1,5 +1,7 @@
 # Real Estate Price Mechanism Ranked Ideas Table
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 - Source CSV: [real-estate-price-mechanism-ranked-ideas.csv](./real-estate-price-mechanism-ranked-ideas.csv)
 - This file is a Markdown rendering of the ranked ideas table for easier browsing in GitHub and local editors.
 

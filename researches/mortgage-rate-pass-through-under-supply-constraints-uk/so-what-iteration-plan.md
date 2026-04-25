@@ -1,5 +1,7 @@
 # So What Iteration Plan
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 ## Purpose
 
 The next iteration should make the research draft more useful to a reviewer or decision-maker by answering: "What should we do differently because of this research?"

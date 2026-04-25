@@ -1,5 +1,7 @@
 # Idea Evaluation: Mortgage-Rate Pass-Through Under Supply Constraints (UK)
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 > Evaluation date: 2026-04-24
 
 ## Inputs

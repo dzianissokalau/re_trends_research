@@ -1,5 +1,7 @@
 # AI-First Economic Research Plan Framework
 
+> Disclaimer: This document was generated with AI and has received only limited human review. It may contain errors or omissions and should be independently verified before use.
+
 This framework is designed for AI-driven economics quantitative research and forecasting. It is not a framework for producing commentary about research. Its purpose is to create research plans that can lead to useful forecasts, decision tools, risk signals, causal estimates, policy insight, and investment or operational decisions.
 
 The framework should be used by an AI research agent before execution begins. The agent should use it to transform a broad economic topic into a decision-grade research plan with clear novelty, credible data use, validation standards, and actionability.
