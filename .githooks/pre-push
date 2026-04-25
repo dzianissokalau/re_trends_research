@@ -1,0 +1,45 @@
+#!/bin/sh
+set -eu
+
+zero_oid="0000000000000000000000000000000000000000"
+blocked=0
+
+while IFS=' ' read -r local_ref local_oid remote_ref remote_oid
+do
+  if [ -z "${local_ref:-}" ]; then
+    continue
+  fi
+
+  case "${remote_ref}" in
+    refs/heads/main|refs/heads/master)
+      echo "Push blocked: pushes to ${remote_ref} require explicit approval." >&2
+      blocked=1
+      ;;
+  esac
+
+  case "${remote_ref}" in
+    refs/heads/*)
+      if [ "${local_oid}" != "${zero_oid}" ]; then
+        ignored_in_tree=$(git ls-tree -r --name-only "${local_oid}" | git check-ignore --no-index -v --stdin || true)
+        if [ -n "${ignored_in_tree}" ]; then
+          echo "Push blocked: target commit contains paths that match .gitignore." >&2
+          echo >&2
+          echo "${ignored_in_tree}" >&2
+          echo >&2
+          echo "Tracked ignored files must be removed or the ignore rule must change before pushing." >&2
+          blocked=1
+        fi
+      fi
+
+      if [ "${local_oid}" != "${zero_oid}" ] && [ "${remote_oid}" != "${zero_oid}" ]; then
+        if ! git merge-base --is-ancestor "${remote_oid}" "${local_oid}"; then
+          echo "Push blocked: non-fast-forward update detected for ${remote_ref}." >&2
+          echo "History rewrites require explicit approval." >&2
+          blocked=1
+        fi
+      fi
+      ;;
+  esac
+done
+
+exit "${blocked}"
