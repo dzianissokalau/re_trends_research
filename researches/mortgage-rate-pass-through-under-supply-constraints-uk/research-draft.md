@@ -8,7 +8,7 @@
 
 This draft tests whether national mortgage-rate shocks pass through more strongly to local completed-sale house prices where local housing supply and stock buffers are weak. The headline sample is an England `LAD-quarter` completed-sale panel from `2015Q1` to `2026Q1`, with post-2016 models preferred because the modern Bank of England effective-rate family is cleaner from 2016 onward. The data have been prepared enough for a review-ready screening study, but not enough for publication-grade causal claims.
 
-The evidence is mixed and should be read as a completed-sale pass-through screen rather than a live-market timing estimate.
+The evidence is mixed and should be read as a completed-sale pass-through screen rather than a live-market timing estimate. Its practical value is not that it produces a standalone local price-risk score today; it identifies which local signals deserve monitoring in the next decision artifact.
 
 - `H1`, supply-constrained places have larger price responses: low-confidence directional support. The same-quarter effective-rate supply interaction is negative in the baseline (`-0.0071`, `p=0.0246`) and survives mean-log price measurement (`-0.0054`, `p=0.0302`), property-mix controls (`-0.0053`, `p=0.0191`), claimant-metric controls (`-0.0071`, `p=0.0252`), latest-quarter exclusion (`-0.0072`, `p=0.0377`), and a stricter 50-transaction threshold (`-0.0070`, `p=0.0703`). Confidence stays low because the result weakens outside London (`-0.0005`, `p=0.8788`) and is not stable across effective-rate timing choices.
 - `H2`, more elastic places adjust more through quantities: inconclusive. Supply tightness does not produce a clear transaction-volume decline in the effective-rate model (`0.0013`, `p=0.9039`). Quoted-rate supply interactions are positive in several specifications, which is not a clean quantity-adjustment story.
@@ -18,7 +18,19 @@ The evidence is mixed and should be read as a completed-sale pass-through screen
 
 The most defensible review-stage conclusion is:
 
-> There is first-pass evidence that realized supply-flow constraints matter for local completed-sale price pass-through, but the signal is not decision-grade because it is sensitive to geography and mortgage-rate timing. Vacancy tightness looks more reliable as a transaction-stress marker than as a price-pass-through marker.
+> There is first-pass evidence that realized supply-flow constraints matter for local completed-sale price pass-through, but the signal is not decision-grade because it is sensitive to geography and mortgage-rate timing. Vacancy tightness looks more reliable as a transaction-stress marker than as a price-pass-through marker. The next product should therefore be a local mortgage-rate stress-monitoring prototype with separate price-pass-through and transaction-stress channels.
+
+## So What
+
+This draft does not yet support a causal claim that supply constraints drive local price pass-through after mortgage-rate increases. Its narrower value is more useful at this stage: it identifies the signals worth monitoring. Supply-flow tightness is a candidate price-pass-through feature, but too fragile to use alone. Vacancy tightness is a stronger transaction-stress marker. The next decision artifact should therefore be a stress-monitoring prototype that reports both channels with confidence warnings.
+
+| Question | Current answer | Practical implication |
+| --- | --- | --- |
+| Can we use supply tightness alone as a local price-risk signal? | Not yet. The price result is low-confidence and sensitive to London and mortgage-rate timing. | Keep supply-flow tightness as a watched candidate feature, not a standalone score. |
+| Which signal is more immediately useful? | Vacancy tightness is more consistent for transaction stress than for price pass-through. | Use vacancy tightness as an early liquidity-stress marker in a prototype monitor. |
+| What should be built next? | A two-channel monitor: price-pass-through screening plus transaction-stress screening. | Validate whether the combined monitor beats simple baselines before any operational use. |
+
+Recommended next artifact: build a local mortgage-rate stress-monitoring prototype that shows, for each LAD, a price-pass-through candidate signal, a transaction-stress candidate signal, the latest data freshness warning, and a confidence label.
 
 ## Hypotheses And Findings
 
@@ -85,10 +97,10 @@ The data preparation followed the common research-readiness sequence: provenance
 | Transformations | Outcomes include real median price, mean-log real price, and transaction counts; constraints use predetermined 2013-2015 averages. | No repeat-sales or full hedonic adjustment is included. |
 | Measurement robustness | CPI versus CPIH, mean-log price, property-mix controls, stricter transaction-count thresholds, and alternative constraint definitions are tested. | Unobserved quality mix and local composition changes can remain. |
 | Confounding checks | Claimant-metric controls are added from the labour extract, falling back to claimant count where claimant rate is unavailable. | Claimant count is not population-normalized and is not a complete local-demand control. |
-| Reproducibility | SQL, analysis script, output CSVs, figures, and source references are stored with the draft. | The lightweight script should still be replicated in a full econometric stack. |
+| Reproducibility | SQL, analysis script, derived tables, figures, and source references are stored with the draft. | The lightweight script should still be replicated in a full econometric stack. |
 | Limitations | Remaining data issues are carried into confidence labels, interpretation, limitations, and next steps. | Causal claims require exogenous shocks, stronger boundary handling, and stronger inference. |
 
-Research readiness verdict: the dataset is prepared enough for a review-ready first empirical draft and for deciding whether the hypothesis deserves a second pass. It is not yet prepared enough for publication-grade causal inference or a decision-grade local ranking because several unresolved preparation gaps still affect timing, geography, price measurement, and shock identification.
+Research readiness verdict: the dataset is prepared enough for a review-ready first empirical draft and for deciding whether the hypothesis deserves a second pass. It is not yet prepared enough for publication-grade causal inference or decision-grade local scoring because several unresolved preparation gaps still affect timing, geography, price measurement, and shock identification.
 
 ## Methodology
 
@@ -232,7 +244,7 @@ Second, stock-buffer tightness appears more relevant for transaction responses t
 
 Third, the quoted-effective spread does not add clear price signal in this version. If a credit-friction channel matters, it is not captured cleanly by the current spread interaction design.
 
-The results do not support a strong claim that constrained markets always experience larger price declines after rate increases. They support a narrower claim: supply-flow tightness is a useful candidate screening feature, and vacancy tightness is a useful transaction-stress feature, but neither is ready as a standalone decision artifact.
+The results do not support a strong claim that constrained markets always experience larger price declines after rate increases. They support a narrower claim: supply-flow tightness is a useful candidate price-pass-through feature, and vacancy tightness is a useful transaction-stress feature. Together they justify a monitored prototype with explicit confidence warnings, not a standalone local price-risk score.
 
 ## What We Can And Cannot Conclude
 
@@ -250,22 +262,28 @@ What we cannot say yet:
 - We cannot claim a fully causal monetary-policy effect because the shock variables are observed mortgage rates, not exogenous rate surprises.
 - We cannot claim a stable UK-wide result because the main supply and stock data are England-only and the clean headline period is post-2016.
 - We cannot claim the stock-buffer channel explains price pass-through because vacancy interactions do not robustly predict real price responses.
-- We cannot deploy a decision-grade local ranking yet because the headline supply-price result is sensitive to London and mortgage-rate timing.
+- We cannot deploy a standalone decision-grade local price-risk score yet because the headline supply-price result is sensitive to London and mortgage-rate timing.
 - We cannot interpret completion-quarter estimates as the exact quarter when buyers formed prices or arranged finance.
 - We cannot claim fully historical geography because the postcode bridge is based on the current NSPL snapshot.
 - We cannot treat the current preparation as publication-grade because point-in-time geography, hedonic or repeat-sales price adjustment, exogenous shocks, and stronger inference are still missing.
 
 ## Decision Implications
 
-| Finding | Confidence | Decision implication |
-| --- | --- | --- |
-| Supply-flow tightness predicts larger full-sample price pass-through | Low | Keep supply-flow tightness in the monitoring candidate set, but do not use it alone. |
-| Vacancy tightness predicts transaction sensitivity | Medium-low | Treat vacancy as a candidate liquidity-stress signal rather than a pure price signal. |
-| Timing choice materially affects results | High | Report same-quarter, lagged, and cumulative mortgage-rate timings side by side. |
-| London sensitivity is material | High | Any local stress ranking must report results with and without London. |
-| Composition and measurement checks do not remove H1 | Medium | Price-measurement concerns are mitigated enough for a second-pass model. |
-| Spread interaction is null for prices | Inconclusive | Do not frame the current draft around a credit-friction channel. |
-| Recent episode is mixed | Low | Do not infer long-run pass-through solely from 2022-24. |
+| Finding | Confidence | Decision status | Decision implication |
+| --- | --- | --- | --- |
+| Supply-flow tightness predicts larger full-sample price pass-through | Low | Watch | Keep supply-flow tightness in the candidate feature set, but do not use it alone. |
+| Vacancy tightness predicts transaction sensitivity | Medium-low | Use cautiously | Treat vacancy as the stronger early liquidity-stress marker in a prototype monitor. |
+| Timing choice materially affects results | High | Use now | Report same-quarter, lagged, and cumulative mortgage-rate timings side by side. |
+| London sensitivity is material | High | Use now | Show London and non-London results separately before interpreting local signals. |
+| Composition and measurement checks do not remove H1 | Medium | Watch | Price-measurement concerns are mitigated enough for a second-pass model. |
+| Spread interaction is null for prices | Inconclusive | Do not use yet | Do not frame the current draft around a credit-friction channel. |
+| Recent episode is mixed | Low | Do not use yet | Do not infer long-run pass-through solely from 2022-24. |
+
+### Candidate Stress Monitor
+
+The recommended next artifact is a local mortgage-rate stress monitor with two separate channels. The price-pass-through channel should combine supply-flow tightness, mortgage-rate timing variants, London/non-London splits, and price-measurement robustness. The transaction-stress channel should combine vacancy tightness, transaction-volume responses, latest-quarter completeness flags, and timing variants.
+
+The monitor should output a candidate signal rather than a decision rule: LAD, channel, direction, confidence label, latest stable quarter, London flag, and caveats. It should carry a visible warning that results require validation before operational use, especially where transaction registration lag, current NSPL geography, observed mortgage-rate shocks, or non-hedonic price measures are material.
 
 ## Limitations
 
@@ -283,16 +301,17 @@ What we cannot say yet:
 ## Next Steps
 
 1. Refresh the completed-sale extract after more registrations arrive and rerun the model with outcomes ending no later than the last stable quarter.
-2. Add point-in-time postcode or boundary reconstruction if local authority boundary precision becomes central to the decision use case.
-3. Add a hedonic or repeat-sales price specification so price effects are less exposed to transaction-composition shifts.
-4. Add an exogenous MPC or OIS surprise series and rerun the pass-through models.
-5. Replicate the panel regressions in a full econometric stack with two-way clustered standard errors.
-6. Promote lagged and cumulative mortgage-rate timing to first-class headline specifications, especially 1-quarter lag and 2-quarter cumulative quoted-rate shocks.
-7. Improve local labour controls by restoring claimant-rate coverage or adding population-normalized local demand controls.
-8. Add planning approval/refusal and physical supply-constraint data to separate realized supply flow from regulatory or geographic constraint.
-9. Build a candidate local stress score that combines supply-flow and vacancy signals, then test whether it beats simple baselines out of sample.
-10. Re-run the model with explicit London and non-London strata as first-class outputs.
-11. Decide whether the decision artifact should be a price-pass-through monitor, a transaction-stress monitor, or both.
+2. Build a candidate local mortgage-rate stress-monitoring prototype with separate price-pass-through and transaction-stress channels.
+3. Validate the prototype out of sample against simple baselines before any operational use.
+4. Add point-in-time postcode or boundary reconstruction if local authority boundary precision becomes central to the decision use case.
+5. Add a hedonic or repeat-sales price specification so price effects are less exposed to transaction-composition shifts.
+6. Add an exogenous MPC or OIS surprise series and rerun the pass-through models.
+7. Replicate the panel regressions in a full econometric stack with two-way clustered standard errors.
+8. Promote lagged and cumulative mortgage-rate timing to first-class headline specifications, especially 1-quarter lag and 2-quarter cumulative quoted-rate shocks.
+9. Improve local labour controls by restoring claimant-rate coverage or adding population-normalized local demand controls.
+10. Add planning approval/refusal and physical supply-constraint data to separate realized supply flow from regulatory or geographic constraint.
+11. Re-run the model with explicit London and non-London strata as first-class outputs.
+12. Decide whether the prototype should remain a research-facing monitor or be hardened into a decision-support artifact.
 
 ## References
 

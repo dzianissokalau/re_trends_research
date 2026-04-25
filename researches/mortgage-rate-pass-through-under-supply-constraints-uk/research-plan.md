@@ -160,7 +160,7 @@ Prioritization score:
 
 ## 7. Available Warehouse Data
 
-Use only the datasets below unless a later section explicitly asks to acquire external data. Do not add other property portals or private source families to this plan.
+Use only the datasets below unless a later section explicitly asks to acquire external data. Do not add unapproved private source families to this plan.
 
 ### Core outcome data
 
