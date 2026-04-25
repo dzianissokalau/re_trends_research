@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+staged_paths=$(git diff --cached --name-only --diff-filter=ACMR)
+
+if [ -z "${staged_paths}" ]; then
+  exit 0
+fi
+
+ignored_matches=$(printf '%s\n' "${staged_paths}" | git check-ignore --no-index -v --stdin || true)
+
+if [ -z "${ignored_matches}" ]; then
+  exit 0
+fi
+
+echo "Commit blocked: staged paths match .gitignore." >&2
+echo "This repo treats .gitignore as a safety boundary and does not allow force-adding ignored files." >&2
+echo >&2
+echo "${ignored_matches}" >&2
+echo >&2
+echo "Remove the ignored path from the index, or remove the ignore rule first after explicit approval." >&2
+exit 1

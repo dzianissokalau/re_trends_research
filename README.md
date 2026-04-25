@@ -65,3 +65,19 @@ The current analysis script has no third-party Python dependencies; it uses only
 - Some study outputs are committed directly to make review easier without needing warehouse access.
 - `.gitignore` currently excludes generated `outputs/*.csv` only for the mortgage-rate study path pattern that is explicitly listed there; review ignore rules if you add new study folders or new output types.
 - Most documents in this repo are AI-assisted research artifacts and should be treated as draft analytical material unless independently validated.
+
+## Git Guardrails
+
+This repo treats `.gitignore` as a safety boundary.
+
+- Ignored files must not be force-added.
+- Pushes to `main` or `master` require explicit approval.
+- History rewrites require explicit approval.
+
+Versioned hooks live in `.githooks/`. Enable them in a local clone with:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+For agent-specific safety rules, see [AGENTS.md](./AGENTS.md).
